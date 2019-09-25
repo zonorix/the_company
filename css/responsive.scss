@@ -1,0 +1,142 @@
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-, -moz-, '' {
+    #{$prefix}#{$property}: $value;
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .pageTop-bg {
+        .message {
+            font-size: 54px;
+        }
+        p {
+            font-size: 26px;
+        }
+    }
+    .card .cards-container .card-item {
+        width: calc(50% - 40px / 2);
+        margin-right: 20px;
+        &:nth-child(3n) {
+            margin-right: 20px;
+        }
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
+            // voice-etc--------------------------------------------
+
+    .blog-tile {
+        .tile-item {
+            margin-right: 20px;
+            width: calc(50% - 40px / 2);
+            &:nth-child(3n) {
+                margin-right: 20px;
+            }
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 810px) {
+    .pageTop-bg {
+        .message {
+            font-size: 40px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    header.responsive {
+        background-color: transparent;
+        box-shadow: none;
+        .header-logo {
+            display: none;
+        }
+        .nav-bar {
+            @include css3(display, flex);
+            transition: all 0.6s;          
+        }
+        .header-nav {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            background-color: #3F51B5;
+            color: #fff;
+            text-align: left;
+            width: 100%;
+            transform: translateY(-100%);
+            transition: all 0.6s;
+            ul {
+                background-color: #3F51B5;
+                width: 100%;
+                margin: auto;
+                padding: 0;
+                li {
+                    list-style-type: none;
+                    width: 100%;
+                    padding: 0 0 0 7%;
+                    margin: 0;
+                    border-bottom: 1px solid #fff;
+                    height: 100px;
+                    a {
+                        display: block;
+                        color: #fff;
+                        padding: 1em 0;
+                        height: 100px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    header .header-nav.active {
+        transform: translateY(0%);
+    } 
+    header .nav-bar.active {
+        transform: translateY(500%);
+    }
+    .card .cards-container .card-item {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    // voice-etc----------------------------------------
+
+    .voice .voice-item {
+        display: block;
+        figure {
+            width: 100%;
+        }
+        .voice-content {
+            width: 100%;
+        }
+    }
+    .blog .blog-item {
+        display: block;
+        figure {
+            width: 100%;
+        }
+        .blog-content {
+            width: 100%;
+            .row {
+                margin-top: 20px;
+            }
+        }
+    }
+    .blog-tile {
+        .tile-item {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+    .price {
+        .price-item {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
