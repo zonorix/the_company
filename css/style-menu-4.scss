@@ -128,8 +128,8 @@ header {
     }
 }
 
-.card {
-    background-color: #EFEFEF;
+// タイトル共通-------------------------------------
+.title-container {
     .section-title {
         font-size: 3.75rem;
         font-weight: 700;
@@ -144,6 +144,12 @@ header {
         height: 5px;
         margin: 44.43px auto 0;
     }
+}
+
+// --------------------------------------------------------------
+
+.card {
+    background-color: #EFEFEF;
     .cards-container {
         width: 100%;
         margin-top: 68.57px;
@@ -175,4 +181,69 @@ header {
         }
     }
     
+}
+
+.news {
+    background-color: #fff;
+    padding-bottom: 30px;
+    .news-inner-wrap {
+        width: 838px;
+        max-width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+    .news-container {
+        margin-top: 90px;
+    }
+    li {
+        color: #333;
+        padding: 18.5px 0 16.5px;
+        @include css3(display, flex);
+        @include css3(justify-content, flex-start);
+        &:not(:last-child) {
+            border-bottom:  solid 1px #333;
+        }
+        .date {
+            margin-left: 7.5px;
+        }
+        .label {
+            margin-left: 30px;
+            border-radius: 6px;
+            color: #fff;
+            display: block;
+            min-width: 100px;
+            max-width: 100%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .label-gray {
+            background-color: #666666;
+        }
+        .label-blue {
+            background-color: #3F51B5;
+        }
+        .label-red {
+            background-color: #E81919;
+        }
+        p {
+            margin-left: 30px;
+        }
+    }
+    .more {
+        text-align: center;
+        p {
+            color: #E81919;
+            margin-top: 16px;
+            font-weight: 700;
+            padding-right: 10.5px;
+            display: inline-block;
+            position: relative;
+            &::after {
+                content: url(../images/news-arrow.svg);
+                position: absolute;
+                right: 0;
+            }
+        }   
+    }
 }
