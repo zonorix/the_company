@@ -416,7 +416,7 @@ header {
         }
     }
 }
-.price {
+.menu-4-price {
     background-color: #EFEFEF;
     padding-bottom: 100px;
     .price-inner-wrap {
@@ -428,7 +428,7 @@ header {
     .price-container {
         margin-top: 80px;
         @include css3(display, flex);
-        @include css3(justify-content, flex-start);
+        @include css3(justify-content, space-between);
         figure img {
             width: 100%;
             max-width: 100%;
@@ -440,7 +440,7 @@ header {
         margin-left: 11%;
         width: 55.7798%;
         table {
-            border: 1px solid #707070;
+            border: 1px solid #5f5e5e;
             border-collapse: collapse;
             table-layout: fixed;
             width: 100%;
@@ -714,6 +714,69 @@ header {
             .radio:checked + span::after {
                 opacity: 1;
             }
+        }
+        .attach-file {
+            margin-top: 49px;
+            p {
+                display: inline-block;
+                font-weight: 700;
+                font-size: 18px;
+                color: #333;
+                width: 177px;
+                vertical-align: top;
+            }
+            .col-left {
+                display: inline-block;
+            }
+            .image-file-btn {
+                color: #fff;
+                background-color: #3F51B5;
+                font-size: 16px;
+                font-weight: 700;
+                border-radius: 8px;
+                display: inline-block;
+                text-align: center;
+                line-height: 40px;
+                &:hover {
+                    cursor: pointer;
+                }
+                width: 185px;
+                height: 40px;
+            }
+            .note {
+                margin-top: 16px;
+            }
+            input {
+                background: none;
+                box-shadow: none;
+                border: none;
+            }
+            .file-name-wrap {
+                width: 100%;
+                padding-left: 177px;
+                .file-name {
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background-image: none;
+                    border: 1px solid rgba(0, 0, 0, 0.16);
+                    border-radius: 0;
+                    color: inherit;
+                    font-family: inherit;
+                    font-size: 1em;
+                    padding: 0.4em 0.8em;
+                    display: block;
+                    margin-top: 16px;
+                    width: 100%;
+                    background-color: #DDDDDD;
+                    &:focus {
+                        border: 1px solid rgba(0, 0, 0, 0.32);
+                        box-shadow: none;
+                        outline: none;
+                    }    
+                }
+            }
+            
         }
         .form-privacy {
             margin-top: 40px;
