@@ -63,14 +63,12 @@
             z-index: 2;
             top: 0;
             left: 0;
-            background-color: #3F51B5;
             color: #fff;
             text-align: left;
             width: 100%;
             transform: translateY(-100%);
             transition: all 0.6s;
             ul {
-                background-color: #3F51B5;
                 width: 100%;
                 margin: auto;
                 padding: 0;
@@ -81,12 +79,26 @@
                     margin: 0;
                     border-bottom: 1px solid #fff;
                     height: 100px;
+                    background-color: #3F51B5;
+                    transition: all 0.3s ease 0s;
+                    &:hover {
+                        background-color: #6574C4;
+                    }
+                    &:nth-child(4) {
+                        a {
+                            border-bottom: none;
+                        }
+                    }
                     a {
                         display: block;
                         color: #fff;
                         padding: 1em 0;
                         height: 100px;
                         margin: 0;
+                        &:hover {
+                            border-bottom: none;
+                            opacity: 0.5;
+                        }
                     }
                 }
             }
@@ -188,6 +200,8 @@
             p {
                 display: block;
                 margin-bottom: 20px;
+                float: none;
+                
             }
             .wrap {
                 @include css3(display, flex);
@@ -205,4 +219,31 @@
             }
         } 
     }   
+    footer {
+        padding-top: 40px;
+        .footer-container {
+            display: block;
+            margin-bottom: 0;
+            .footer-logo img {
+                margin-bottom: 0;
+            }
+            .col:first-child {
+                @include css3(display, flex);
+                @include css3(justify-content, space-between); 
+            }
+            .col:nth-child(2) {
+                text-align: center;
+                margin-top: 30px;
+            }
+            .col:last-child {
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+        .copy {
+            padding-left: 0;
+            margin-top: 30px;
+        }
+    } 
+    
 }

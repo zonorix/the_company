@@ -1,0 +1,197 @@
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-, -moz-, '' {
+    #{$prefix}#{$property}: $value;
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .pageTop-bg {
+        .message {
+            font-size: 54px;
+        }
+        p {
+            font-size: 26px;
+        }
+    }
+    section.card .cards-container .card-item {
+        width: calc(50% - 40px / 2);
+        margin-right: 20px;
+        &:nth-child(3n) {
+            margin-right: 20px;
+        }
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
+}
+@media screen and (max-width: 810px) {
+    .pageTop-bg {
+        .message {
+            font-size: 40px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    header.responsive {
+        background-color: transparent;
+        box-shadow: none;
+        .header-logo {
+            display: none;
+        }
+        .nav-bar {
+            @include css3(display, flex);
+            transition: all 0.6s;          
+        }
+        .header-nav {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            color: #fff;
+            text-align: left;
+            width: 100%;
+            transform: translateY(-100%);
+            transition: all 0.6s;
+            ul {
+                width: 100%;
+                margin: auto;
+                padding: 0;
+                li {
+                    list-style-type: none;
+                    width: 100%;
+                    padding: 0 0 0 7%;
+                    margin: 0;
+                    border-bottom: 1px solid #fff;
+                    height: 50px;
+                    background-color: #3F51B5;
+                    transition: all 0.3s ease 0s;
+                    &:hover {
+                        background-color: #6574C4;
+                    }
+                    &:nth-child(4) {
+                        a {
+                            border-bottom: none;
+                        }
+                    }
+                    a {
+                        display: block;
+                        color: #fff;
+                        padding: 1em 0;
+                        height: 50px;
+                        margin: 0;
+                        &:hover {
+                            border-bottom: none;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    header .header-nav.active {
+        transform: translateY(0%);
+    } 
+    header .nav-bar.active {
+        transform: translateY(350%);
+    }
+    section.card .cards-container .card-item {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    
+    section.menu-4-price {
+        .price-container {
+            display: block;
+            figure img {
+                padding: 0 20px;
+            }
+        }
+        .table-container {
+            margin: 30px 0 0;
+            padding: 0 20px;
+            width: 100%;
+        }
+    }
+
+    section.contact .contact-form {
+        .form-name, .form-email {
+            display: block;
+            label {
+                margin-bottom: 20px;
+            }
+            input {
+                width: 100%;
+            }
+        }  
+        .form-select {
+            display: block;
+            label {
+                margin-bottom: 20px;
+            }
+            .select-type {
+                width: 100%;
+            }
+        }
+        .form-message {
+            display: block;
+            label {
+                margin-bottom: 20px;
+            }
+            .message {
+                width: 100%;
+            }
+        }
+        .attach-file {
+            p {
+                display: block;
+                margin-bottom: 20px;
+                float: none;
+                
+            }
+            .wrap {
+                @include css3(display, flex);
+                @include css3(justify-content, space-between);
+                .note {
+                    margin-top: 8px;
+                }
+            }
+            .file-name-wrap {
+                display: inline-block;
+                padding-left: 0;
+                .file-name {
+                    margin: 0 0 0 16px;
+                }
+            }
+        } 
+    }   
+    footer {
+        padding-top: 40px;
+        .footer-container {
+            display: block;
+            margin-bottom: 0;
+            .footer-logo img {
+                margin-bottom: 0;
+            }
+            .col:first-child {
+                @include css3(display, flex);
+                @include css3(justify-content, space-between); 
+            }
+            .col:nth-child(2) {
+                text-align: center;
+                margin-top: 30px;
+            }
+            .col:last-child {
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+        .copy {
+            padding-left: 0;
+            margin-top: 30px;
+        }
+    } 
+    
+}

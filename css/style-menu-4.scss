@@ -9,7 +9,7 @@
     }
 }
 body {
-    font-family: 游ゴシック, YuGothic, Arial, Roboto, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+    font-family: 'Lato', 'Noto Sans JP', sans-serif;
     color: #000;
     background-color: #fff;
     font-size: 16px;
@@ -65,6 +65,12 @@ header {
                 padding-bottom: 4.5px;
             }
         }
+        &:nth-child(4) {
+            a {
+                border-bottom: 3px solid #E81919;
+                padding-bottom: 4.5px;
+            }
+        }
     }
     .nav-bar {
         position: absolute;
@@ -91,14 +97,15 @@ header {
     }   
 }
 .pageTop-bg {
-    width: 100vw;
-    height: 100vh;
     background-image: url(../images/mainvisual.png);
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
     backdrop-filter: blur(undefined);
     -webkit-backdrop-filter: blur(undefined);
+
     @include css3(display, flex);
     @include css3(justify-content, center);
     @include css3(align-items, center);
@@ -285,6 +292,10 @@ header {
             line-height: 30px;
             font-weight: 700;
             margin-left: 36px;
+            transition: all 0.3s ease 0s;
+            &:hover {
+                opacity: 0.6;
+            }
         }
     }
     .pagination {
@@ -298,6 +309,7 @@ header {
             height: 50px;
             position: relative;
             text-align: center;
+            transition: all 0.3s ease 0s;
             &:not(:first-child) {
                 margin-left: 20px;
             }
@@ -356,6 +368,11 @@ header {
                 width: 100px;
                 height: 30px;
                 position: relative;
+                transition: all 0.3s ease 0s;
+                &:hover {
+                    background-color: #333;
+                    color: #fff;
+                }
                 a {
                     position: absolute;
                     top: 0;
@@ -724,6 +741,7 @@ header {
                 color: #333;
                 width: 177px;
                 vertical-align: top;
+                float: left;
             }
             .col-left {
                 display: inline-block;
@@ -846,5 +864,54 @@ header {
                 margin-top: 30px;
             }
         }
+    }
+}
+
+footer {
+    color: #fff;
+    background: -moz-linear-gradient(top, #666, #333);
+    background: -webkit-liner-gradient(top, #666, #333);
+    background: linear-gradient(to bottom, #666, #333);
+    padding: 74px 20px 30px;
+    .footer-container {
+        @include css3(display, flex);
+        @include css3(justify-content, space-between);       
+        margin-bottom: 90px;
+        .footer-logo img {
+            min-width: 200px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 30px;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+            text-transform: capitalize;
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+        }
+        .twitter {
+            border: 15px solid #55ACEE;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .facebook {
+            border: 15px solid #3B5998;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        .instagram {
+            border: 15px solid #D93177;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+    }
+    .copy {
+        text-align: center;
+        padding-left: 70px;
     }
 }
