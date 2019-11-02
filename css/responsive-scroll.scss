@@ -14,7 +14,7 @@
         }
     }
     section.card .cards-container .card-item {
-        width: calc(50% - 40px / 2);
+        width: calc(50% - 20px / 2);
         margin-right: 20px;
         &:nth-child(3n) {
             margin-right: 20px;
@@ -22,6 +22,9 @@
         &:nth-child(2n) {
             margin-right: 0;
         }
+    }
+    section.tab .tab-panel .row-wrap .lead-wrap {
+        margin-left: 0;
     }
 
 }
@@ -100,18 +103,23 @@
     section.card .cards-container .card-item {
         width: 100%;
         margin: 0 0 20px;
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+    section.widget .widget-container {
+        display: block;
+        .blog-container {
+            margin: 30px 0 0 0;
+        }
     }
     
     section.menu-4-price {
         .price-container {
             display: block;
-            figure img {
-                padding: 0 20px;
-            }
         }
         .table-container {
             margin: 30px 0 0;
-            padding: 0 20px;
             width: 100%;
         }
     }
@@ -166,7 +174,22 @@
                 }
             }
         } 
-    }   
+    } 
+    section.tab .tab-panel .row-wrap {
+        display: block;
+        .img-wrap {
+            width: 100%;
+            margin-left: 0;     
+        }
+        .lead-wrap {
+            width: 100%;
+            margin: 30px 0 0 0;
+            .more-btn-wrap {
+                text-align: center;
+            }
+
+        }
+    } 
     footer {
         padding-top: 40px;
         .footer-container {

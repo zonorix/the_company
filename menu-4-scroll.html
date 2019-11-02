@@ -357,8 +357,10 @@
 
                     </div>
                     <div class="form-privacy">
-                        <label><input class="privacy-check" type="checkbox" name="check-name"><span><span
-                                    class="underline">プライバシーポリシー</span>に合意する</span></label>
+                        <label>
+                            <input class="privacy-check" type="checkbox" name="check-name">
+                            <span><span class="underline" id="modal-show">プライバシーポリシー</span>に合意する</span>
+                        </label>
                     </div>
                     <div class="submit-btn">
                         <button type="submit">送信する</button>
@@ -367,6 +369,33 @@
             </div>
         </div>
     </section>
+    <div class="contact-modal-container" id="modal">
+        <div class="contact-modal">
+            <div class="contact-modal-title-wrap">
+                <h3 class="contact-modal-title">プライバシーポリシー</h3>
+                <div class="modal-title-border"></div>
+            </div>
+            <div class="modal-list-wrap">
+                <ul class="modal-list">
+                    <li class="modal-list-item">
+                        <h4 class="modal-list-title">ほにゃらら</h4>
+                        <p class="modal-list-content">
+                            ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら。
+                        </p>
+                    </li>
+                    <li class="modal-list-item">
+                        <h4 class="modal-list-title">ほにゃらら</h4>
+                        <p class="modal-list-content">
+                            ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-btn-wrap">
+                <button class="close-btn" id="closeModal">閉じる</button>
+            </div>
+        </div>
+    </div>
     <section class="tab">
         <div class="tab-inner-wrap">
             <div class="title-container">
@@ -392,7 +421,9 @@
                                 <p class="lead">
                                     タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。
                                 </p>
-                                <button class="more-btn"><a href="#">詳しく見る</a></button>
+                                <div class="more-btn-wrap">
+                                    <button class="more-btn"><a href="#">詳しく見る</a></button>
+                                </div>
                             </div>
                         </div>
                     </div>
